@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lose Your Marbles</title>
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore-compat.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    canvas {
+      margin: 20px auto;
+      background-color: white;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+    
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1000" height="1000" hidden="true"></canvas>
+  <button id="create" onclick="gameInit()">Create map</button>
+  <br>
+  <input id="loadName" type="text">
+  <button id="load" onclick="loadMap()">Load map</button>
+  <input id="saveName" type="text" hidden="true">
+  <button id="save" hidden="true" onclick="saveMap()">Save map</button>
+  <h1>How to Use</h1>
+  <p>Click on Create Map to get started. Select the gray line to draw a platform for the red ball. Click on the other icons to add other physics items. Press ENTER to simulate the ball dropping. To save your map, enter a name into the text box below and click Save Map. To view a previously created map, refresh and enter the name, then click Load Map. You can also share your map with others by giving them the name you defined.</p>
+</body>
+</html>
