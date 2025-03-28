@@ -5,13 +5,7 @@ var mouseEvents = [];
 var keyEvents = [];
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC8FDfym7x2OKxfSiDGpZLXw06ZszNk1uE",
-    authDomain: "lose-your-marbles.firebaseapp.com",
-    projectId: "lose-your-marbles",
-    storageBucket: "lose-your-marbles.firebasestorage.app",
-    messagingSenderId: "791730900542",
-    appId: "1:791730900542:web:1c14f781a62377dd9d8b6f",
-    measurementId: "G-ZJSGTJ5KSF"
+    //firebaseConfig
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
